@@ -8,6 +8,6 @@ COPY . /app
 
 RUN uv pip install --system --no-cache-dir -r ./requirements.txt
 
-EXPOSE 8000
+EXPOSE 3000
 
-CMD ["python","app.py"]
+CMD ["python","model.py"]
