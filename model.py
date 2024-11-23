@@ -73,6 +73,7 @@ classes = ['Kapha', 'Pitta', 'Vata']
 origins = [
     "http://localhost:8000",  # fastapi app
     "https://ayurvision-server.vercel.app"  # deployement on vercel
+    "https://ayurvision-server.onrender.com"  # render.com
 ]
 
 app.add_middleware(
@@ -110,6 +111,4 @@ async def predict_prakriti(request: Request):
 
 if __name__ == '__main__':
     import uvicorn
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-    os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
     uvicorn.run(app, host="0.0.0.0", port=3000)
