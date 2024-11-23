@@ -6,7 +6,7 @@ RUN pip install --upgrade pip && pip install uv
 
 COPY . /app
 
-RUN uv pip install --system --no-cache-dir -r ./app/requirements.txt
+RUN uv pip install --system --no-cache-dir -r ./requirements.txt
 
 EXPOSE 8000
 
